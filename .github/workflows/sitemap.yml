@@ -1,3 +1,4 @@
+```yaml
 name: Generate sitemap
 
 on:
@@ -31,20 +32,33 @@ jobs:
           drop-html-extension: false
           date-only: true
 
-      - name: Show sitemap statistics
+      - name: Check generated sitemap
         run: |
-          echo "Sitemap: ${{ steps.sitemap.outputs.sitemap-path }}"
-          echo "URLs: ${{ steps.sitemap.outputs.url-count }}"
-          echo "Excluded: ${{ steps.sitemap.outputs.excluded-count }}"
+          echo "Contenido de la raíz:"
+          ls -la
+          echo ""
+          echo "Comprobando sitemap.xml:"
+          if [ -f sitemap.xml ]; then
+            echo "sitemap.xml EXISTE"
+            echo ""
+            echo "Primeras líneas:"
+            head -20 sitemap.xml
+          else
+            echo "ERROR: sitemap.xml NO EXISTE"
+            exit 1
+          fi
 
       - name: Commit sitemap if changed
         run: |
-          if git diff --quiet sitemap.xml; then
-            echo "No changes to sitemap.xml"
+          git status --short
+          git add sitemap.xml
+
+          if git diff --cached --quiet; then
+            echo "No hay cambios que guardar"
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add sitemap.xml
             git commit -m "Actualizar sitemap"
             git push
           fi
+```
