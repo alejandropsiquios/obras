@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alejandropsiquios.github.io/obras/sitemap.xml
