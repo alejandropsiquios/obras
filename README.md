@@ -80,14 +80,12 @@ El proyecto utiliza tecnologías web estándar, incluyendo:
 
 La estructura del repositorio separa la presentación general del sitio de las diferentes páginas dedicadas a las obras y textos literarios.
 
-```text
 /
 ├── index.html
 ├── libros/
 ├── css/
 ├── js/
 └── ...
-```
 
 ## Sitio web
 

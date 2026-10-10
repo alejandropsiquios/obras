@@ -9,14 +9,11 @@
     <meta name="description"
           content="Obras que acompañan reúne textos y microtextos sobre los estados de la vida y otros momentos que pueden resultar difíciles de poner en palabras. Alejandro Psíquios">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1">
-
     <meta name="robots"
           content="index, follow, max-image-preview:large">
 
     <link rel="canonical"
-          href="https://alejandropsiquios.github.io/obras">
+          href="https://alejandropsiquios.github.io/obras/">
 
     <meta name="language"
           content="es">
@@ -35,7 +32,7 @@
           content="Textos y microtextos sobre tristeza, soledad, pérdida, desorientación, silencio y otros estados de la vida.">
 
     <meta property="og:url"
-          href="https://alejandropsiquios.github.io/obras">
+          href="https://alejandropsiquios.github.io/obras/">
 
     <meta property="og:locale"
           content="es_ES">
@@ -76,7 +73,7 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "@id": "https://alejandropsiquios.github.io/obras/#website",
-        "url": "https://alejandropsiquios.github.io/obras",
+        "url": "https://alejandropsiquios.github.io/obras/",
         "name": "Obras que acompañan",
         "description": "Textos y microtextos sobre los estados de la vida.",
         "inLanguage": "es"
@@ -91,7 +88,7 @@
     >
 
     <meta name="google-site-verification" content="kLOPfw4ayJzUm-UVRcDK3p5SwvehiBp6Hks94H58UJA" />
-
+    <meta name="google-adsense-account" content="ca-pub-8525565545885367">
 </head>
 
 <body>
@@ -119,12 +116,39 @@
             <div class="collapse navbar-collapse" id="navbarNav">
 
                 <ul class="navbar-nav ms-auto">
-            
                     <!-- Textos -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#obras">
-                            Textos para leer aquí
+                    <li class="nav-item dropdown">
+            
+                        <a class="nav-link dropdown-toggle"
+                           href="#obras"
+                           id="navbarObras"
+                           role="button"
+                           data-bs-toggle="dropdown"
+                           aria-expanded="false">
+            
+                           Textos para leer aquí
+            
                         </a>
+            
+            
+                        <ul class="dropdown-menu"
+                            aria-labelledby="navbarObras">
+            
+                            <li>
+                                <a class="dropdown-item"
+                                   href="textos/categorias/categorias.html">
+                                    Categorías
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a class="dropdown-item"
+                                   href="#obras">
+                                    Todos los textos
+                                </a>
+                            </li>            
+                        </ul>
+            
                     </li>
             
             
@@ -176,9 +200,16 @@
             
                         </ul>
             
+                        <li class="nav-item">
+                            <a class="nav-link" href="privacidad.html">
+                                Privacidad
+                            </a>
+                        </li>
                     </li>
             
                 </ul>
+
+                
             
             </div>
 
@@ -204,6 +235,13 @@
                         <p class="lead mb-4">
                             Escribo sobre experiencias humanas
                         </p>
+                        <img
+                                    src="images/alejandro-psiquios.png"
+                                    class="img-fluid"
+                                    alt="Logo de Alejandro Psíquios"
+                                    width="200"
+                                    height="200"
+                                    loading="eager">
                     </div>
 
                 </div>
@@ -253,7 +291,6 @@
                                 <p class="card-text text-body-secondary">
                                     Lee desde aquí.
                                 </p>
-
                                 <ul>
                                     <li>
                                         <a class="link-body-emphasis"
@@ -292,7 +329,13 @@
                                         </a>
                                     </li>
                                 </ul>
-
+                                <div class="d-flex flex-column align-items-center gap-2 mb-2">
+                                    <a href="textos/categorias/categorias.html"
+                                       class="btn btn-primary"
+                                       rel="noopener noreferrer">
+                                       Categorías
+                                    </a>
+                                </div>
                             </div>
 
                         </div>
@@ -343,7 +386,23 @@
                                         </a>
                                     </li>
                                 </ul>
-                            
+                                <div class="d-flex flex-column align-items-center gap-2 mb-2">
+                                    
+                                    <a href="https://www.amazon.es/stores/author/B0F6T558ND"
+                                    class="btn btn-primary"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                        Todos los libros (España)
+                                    </a>
+                                    <a href="https://www.amazon.com/stores/author/B0F6T558ND"
+                                    class="btn btn-primary"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                        Todos los libros (Internacional)
+                                    </a>
+                                </div>
+
+                                
                             </div>
 
                         </div>
@@ -373,6 +432,5 @@
 
     <!-- Bootstrap JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
